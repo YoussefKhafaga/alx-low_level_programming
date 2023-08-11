@@ -17,8 +17,8 @@ else if (c <= '9')
 {
 putchar(c);
 }
-putchar('\n');
 }
+putchar('\n');
 return (0);
 }
 
