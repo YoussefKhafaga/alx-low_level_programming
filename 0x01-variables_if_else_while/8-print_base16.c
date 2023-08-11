@@ -6,16 +6,16 @@
  */
 int main(void)
 {
-int i;
-for (i = 0; i < 16; i++)
+char c;
+for (c = '0'; c <= 'f'; c++)
 {
-if (i < 10)
+if (c >= 'a' && c <= 'f')
 {
-putchar('0' + i);
+putchar(c);
 }
 else
 {
-putchar('a' + i - 10);
+putchar(c);
 }
 putchar('\n');
 }
