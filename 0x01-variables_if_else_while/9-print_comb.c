@@ -13,5 +13,6 @@ putchar('0' + i);
 putchar(',');
 putchar(' ');
 }
+putchar(',');
 return (0);
 }
