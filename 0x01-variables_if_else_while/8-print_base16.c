@@ -13,7 +13,7 @@ if (c >= 'a' && c <= 'f')
 {
 putchar(c);
 }
-else
+else if (c <= '9')
 {
 putchar(c);
 }
