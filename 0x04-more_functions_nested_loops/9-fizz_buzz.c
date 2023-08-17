@@ -27,6 +27,7 @@ _putchar('F');
 _putchar('i');
 _putchar('z');
 _putchar('z');
+continue;
 }
 if (i % 5 == 0)
 {
@@ -34,6 +35,7 @@ _putchar('B');
 _putchar('u');
 _putchar('z');
 _putchar('z');
+continue;
 }
 _putchar(i + '0');
 }
