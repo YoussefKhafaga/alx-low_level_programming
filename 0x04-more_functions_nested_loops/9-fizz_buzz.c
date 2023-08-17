@@ -35,5 +35,6 @@ _putchar('u');
 _putchar('z');
 _putchar('z');
 }
+_putchar(i + '0');
 }
 }
