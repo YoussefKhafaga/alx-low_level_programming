@@ -7,9 +7,10 @@
 
 void puts_half(char *str)
 {
-int i, length;
-for (length = 0; str[length] != '\0'; length++)
+int i, length = 0;
+while (*str++)
 {
+length++;
 }
 for (i = length / 2; i < length; i++)
 {
