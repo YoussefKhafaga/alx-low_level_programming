@@ -6,7 +6,7 @@
  */
 char *cap_string(char *str)
 {
-  char delimeters[13] = {'\n', '\t', ' ', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
+char delimeters[13] = {'\n', '\t', ' ', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
 int i, j;
 for (i = 0; str[i] != '\0'; i++)
 {
@@ -14,7 +14,7 @@ if (i == 0 && str[i] >= 'a' && str[i] <= 'z')
 {
 str[i] = str[i] - 32;
 }
-for (j = 0; j < 10; j++)
+for (j = 0; j < 13; j++)
 {
 if (str[j] == str[i])
 {
