@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 /**
  * cap_string - capitalize words in string
  * @str: string to be capitalized
@@ -7,7 +6,7 @@
  */
 char *cap_string(char *str)
 {
-char delimeters[10] = {',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
+  char delimeters[13] = {'\n', '\t', ' ', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
 int i, j;
 for (i = 0; str[i] != '\0'; i++)
 {
