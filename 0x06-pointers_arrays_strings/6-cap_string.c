@@ -6,7 +6,8 @@
  */
 char *cap_string(char *str)
 {
-char delimeters[13] = {'\n', '\t', ' ', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
+char delimeters[13] = {'\n', '\t',
+' ', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
 int i, j;
 for (i = 0; str[i] != '\0'; i++)
 {
@@ -16,7 +17,7 @@ str[i] = str[i] - 32;
 }
 for (j = 0; j < 13; j++)
 {
-if (str[j] == str[i])
+if (delimeters[j] == str[i])
 {
 str[i + 1] = str[i] - 32;
 }
