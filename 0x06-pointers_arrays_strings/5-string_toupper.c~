@@ -1,4 +1,6 @@
 #include "main.h"
 /**
  * string_toupper - converts characters from lowercase to uppercase
- * 
+ * @str: string to be converted to uppercase
+ * Return: uppercase string
+ */
