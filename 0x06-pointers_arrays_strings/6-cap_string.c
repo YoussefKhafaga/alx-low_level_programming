@@ -1,27 +1,30 @@
 #include "main.h"
 /**
- * cap_string - capitalize words in string
- * @str: string to be capitalized
- * Return: capitalized words string
+ * cap_string - capitalizes everey word of a string
+ * @s: string to modify
+ * Return: the resulting string
  */
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
-char delimeters[13] = {'\n', '\t',
-' ', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
 int i, j;
-for (i = 0; str[i] != '\0'; i++)
+char delimeter[13] = {' ', '\t', '\n', ',', ';', '.',
+'!', '?', '"', '(', ')', '{', '}'};
+for (i = 0; s[i] != '\0'; i++)
 {
-if (i == 0 && str[i] >= 'a' && str[i] <= 'z')
-{
-str[i] = str[i] - 32;
+if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
+{ 
+s[i] -= 32;
 }
 for (j = 0; j < 13; j++)
 {
-if (delimeters[j] == str[i])
+if (s[i] == delimeter[j])
 {
-str[i + 1] = str[i] - 32;
+if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
+{
+s[i + 1] -= 32;
 }
 }
 }
-return (str);
+}
+return (s);
 }
