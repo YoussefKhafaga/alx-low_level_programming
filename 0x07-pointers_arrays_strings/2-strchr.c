@@ -13,6 +13,6 @@ if (s[0] == c)
 return (s);
 }
 }
-return (NULL);
+return (0);
 }
 
