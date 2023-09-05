@@ -13,19 +13,19 @@ int **alloc_grid(int width, int height)
 	{
 		return (NULL);
 	}
-	twodarr = malloc(sizeof(int) * width);
+	twodarr = malloc(sizeof(int) * height);
 	if (twodarr == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < width; i++)
+	for (i = 0; i < height; i++)
 	{
-		twodarr[i] = malloc(sizeof(int) * height);
+		twodarr[i] = malloc(sizeof(int) * width);
 		if (twodarr[i] == NULL)
 		{
 			return (NULL);
 		}
-		for (j = 0; j < height; j++)
+		for (j = 0; j < width; j++)
 		{
 			twodarr[i][j] = 0;
 		}
