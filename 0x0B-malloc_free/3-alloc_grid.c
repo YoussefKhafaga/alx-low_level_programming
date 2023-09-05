@@ -7,7 +7,7 @@
  */
 int **alloc_grid(int width, int height)
 {
-	int **twodarr, i;
+	int **twodarr, j, i;
 
 	if (width <= 0 || height <= 0)
 	{
@@ -24,6 +24,10 @@ int **alloc_grid(int width, int height)
 		if (twodarr[i] == NULL)
 		{
 			return (NULL);
+		}
+		for (j = 0; j < height; j++)
+		{
+			twodarr[i][j] = 0;
 		}
 	}
 	return (twodarr);
