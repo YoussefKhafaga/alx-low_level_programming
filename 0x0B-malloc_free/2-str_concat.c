@@ -19,7 +19,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
-	str = malloc(sizeof(char) * ((int)strlen(s1) + (int)strlen(s2)) + 2);
+	str = malloc(sizeof(char) * ((int)strlen(s1) + (int)strlen(s2)) + 1);
 	if (str == NULL)
 	{
 		return (NULL);
@@ -30,7 +30,7 @@ char *str_concat(char *s1, char *s2)
 		str[i] = s1[i];
 		i++;
 	}
-	while (i < ((int)strlen(s1) + (int)strlen(s2)))
+	while (i < ((int)strlen(str)) + 1)
 	{
 		str[i] = s2[i];
 		i++;
