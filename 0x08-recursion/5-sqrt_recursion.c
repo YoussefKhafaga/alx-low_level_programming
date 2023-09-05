@@ -1,4 +1,12 @@
 #include "main.h"
+
+/**
+ * helper - blank
+ * @n: number
+ * @i: incrementor
+ * Return: -1;
+ */
+
 /**
  *_sqrt_recursion -  func that returns the natural square root of a number.
  * @n: for number input
@@ -24,13 +32,6 @@ int _sqrt_recursion(int n)
 		return (helper(n, 1));
 	}
 }
-
-/**
- * helper - blank
- * @n: number
- * @i: incrementor
- * Return: -1;
- */
 
 int helper(int n, int i)
 {
