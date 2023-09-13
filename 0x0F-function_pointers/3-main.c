@@ -11,8 +11,7 @@
 
 int main(int argc, char* argv[])
 {
-	int a, b, (*oprt(int, int));
-	char op;
+        int a, b, (*oprt)(int, int);
 
 	if (argc < 4)
 	{
@@ -20,15 +19,14 @@ int main(int argc, char* argv[])
 		exit(98);
 	}
 	a = atoi(argv[1]);
-	op = argv[2];
 	b = atoi(argv[3]);
-	oprt = get_op_func(op);
-	if (oprt == NULL)
+	oprt = get_op_func(argv[2]);
+	if (!oprt)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	printf("%d\n", oprt(a, b));
+	printf("%d\n", (int)oprt(a, b));
 	return (0);
 }
 

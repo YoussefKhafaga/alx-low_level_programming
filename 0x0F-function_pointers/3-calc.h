@@ -1,5 +1,6 @@
 #ifndef HEADERFILE
 #define HEADERFILE
+#include <stddef.h>
 /**
  * struct op - Struct op
  *
