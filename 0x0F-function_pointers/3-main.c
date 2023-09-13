@@ -9,9 +9,9 @@
  * Return: result of operation
  */
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
-        int a, b, (*oprt)(int, int);
+	int a, b, result, (*oprt)(int, int);
 
 	if (argc < 4)
 	{
@@ -26,7 +26,8 @@ int main(int argc, char* argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	printf("%d\n", (int)oprt(a, b));
+	result = oprt(a, b);
+	printf("%d\n", result);
 	return (0);
 }
 
