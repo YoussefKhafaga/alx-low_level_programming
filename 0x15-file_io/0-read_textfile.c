@@ -13,12 +13,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (filename == NULL)
 	{
+		free(buff);
 		return (0);
 	}
 	fp = fopen(filename, "r");
 	if (fp == NULL)
 	{
 		fclose(fp);
+		free(buff);
 		return (0);
 	}
 	if (buff == NULL)
@@ -28,13 +30,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	sizeofbuff = fread(buff, 1, letters, fp);
 	if (sizeofbuff == -1)
 	{
-		free (buff);
+		free(buff);
 		fclose(fp);
 		return (0);
 	}
 	printf("%s", buff);
 	fclose(fp);
-	free (buff);
+	free(buff);
 	return (sizeofbuff);
 }
 
