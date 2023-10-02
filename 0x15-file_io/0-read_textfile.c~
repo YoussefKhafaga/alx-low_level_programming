@@ -1,0 +1,31 @@
+#include "main.h"
+/**
+ * read_textfile - reads a file
+ * @filename: name of the file pointer
+ * @letters: numbers of letters should be written
+ * Return: 0 if any failure happens number of letters printed otherwise
+ */
+ssize_t read_textfile(const char *filename, size_t letters)
+{
+	FILE *fp;
+	char *buff = malloc(letters);
+
+	if (filename == NULL)
+	{
+		return (0);
+	}
+	fp = fopen(filename, "r");
+	if (fp == NULL)
+	{
+		return (0);
+	}
+	fgets(buff, letters, fp);
+	if (buff == NULL)
+	{
+		return (0);
+	}
+	printf("%s", buff);
+	fclose(fp);
+	return (sizeof(buff));
+}
+
