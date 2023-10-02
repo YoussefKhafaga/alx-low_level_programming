@@ -7,35 +7,34 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *fp;
+	int fp;
 	char *buff = malloc(letters + 1);
 	ssize_t sizeofbuff;
 
+	if (buff == NULL)
+	{
+		return (0);
+	}
 	if (filename == NULL)
 	{
 		free(buff);
 		return (0);
 	}
-	fp = fopen(filename, "r");
-	if (fp == NULL)
+	fp = open(filename, O_RDONLY);
+	if (fp == -1)
 	{
-		fclose(fp);
 		free(buff);
 		return (0);
 	}
-	if (buff == NULL)
-	{
-		return (0);
-	}
-	sizeofbuff = fread(buff, 1, letters, fp);
+	sizeofbuff = read(fp, buff, letters);
 	if (sizeofbuff == -1)
 	{
 		free(buff);
-		fclose(fp);
+		close(fp);
 		return (0);
 	}
-	printf("%s", buff);
-	fclose(fp);
+	write(STDOUT_FILENO, buff, sizeofbuff);
+	close(fp);
 	free(buff);
 	return (sizeofbuff);
 }
